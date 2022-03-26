@@ -1,6 +1,6 @@
 data class Likes(
-    val count: Int,
-    val userLikes: Boolean,
-    val canLike: Boolean,
-    val canPublish: Boolean
+    val count: Int = 0,
+    val userLikes: Boolean = false,
+    val canLike: Boolean = false,
+    val canPublish: Boolean = false
 )
