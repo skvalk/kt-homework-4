@@ -1,5 +1,5 @@
 fun main() {
-     postOne = Post(id = 1, text = "First post")
+    val postOne = Post(id = 1, text = "First post")
     val postTwo = Post(id = 2, text = "Second post")
     println(WallService.add(postOne))
     println(WallService.add(postTwo))
