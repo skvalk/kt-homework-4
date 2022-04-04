@@ -6,11 +6,8 @@ class WallServiceTest {
 
     @Test
     fun add() {
-       for (i in 1..10) {
-           val result = WallService.add(Post(text = "test")).id
-           println(result)
-           assertNotEquals(0, result)
-       }
+        val result = WallService.add(Post(id = 0, text = "test")).id
+        assertNotEquals(0, result)
     }
 
     @Test
