@@ -1,6 +1,3 @@
-import java.time.LocalDateTime
-import java.time.ZoneOffset
-
 object WallService {
     private var posts = emptyArray<Post>()
     private var postId: Int = 1
