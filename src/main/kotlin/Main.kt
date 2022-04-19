@@ -13,5 +13,6 @@ fun main() {
     println(WallService.add(postTwo))
     println(WallService.update(postOne))
     println(WallService.update(postTwo))
+//    WallService.createComment(Comment(postId = 3))
     WallService.print()
 }

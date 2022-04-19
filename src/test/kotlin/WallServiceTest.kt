@@ -12,6 +12,7 @@ class WallServiceTest {
 
     @Test
     fun updateTrue() {
+        WallService.clear()
         WallService.add(Post(text = "test"))
         WallService.add(Post(text = "test"))
         val result = WallService.update(Post(id = 2, text = "Update TEST"))
@@ -20,9 +21,18 @@ class WallServiceTest {
 
     @Test
     fun updateFalse() {
+        WallService.clear()
         WallService.add(Post(text = "test"))
         WallService.add(Post(text = "test"))
         val result = WallService.update(Post(id = 3, text = "Update TEST"))
         assertFalse(result)
+    }
+
+    @Test(expected = PostNotFoundException::class)
+    fun shouldThrow() {
+        WallService.clear()
+        WallService.add(Post(text = "test"))
+        WallService.add(Post(text = "test"))
+        WallService.createComment(Comment(postId = 3))
     }
 }
